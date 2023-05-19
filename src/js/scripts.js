@@ -13,7 +13,7 @@ var today = new Date();
 
 let d = today.getDate();
 let m = today.getMonth()+1;
-let y = today.getFullYear()-1; 
+let y = today.getFullYear();
 
 let maxDays = 0;
 let monthNum = 1;
@@ -91,7 +91,7 @@ btn.addEventListener("click", (days, month, year) => {
     
     console.log(`Sua idade é ${ageYears} y, ${ageMonths} m and ${ageDays} d`);
 
-    showAgeDay.innerHTML =  `${ageYears} anos`;
-    showAgeMonth.innerHTML =  `${ageMonths} meses`;
-    showAgeYear.innerHTML =  `${ageDays} dias`;
+    showAgeDay.innerHTML =  `${ageYears}`;
+    showAgeMonth.innerHTML =  `${ageMonths}`;
+    showAgeYear.innerHTML =  `${ageDays}`;
 })

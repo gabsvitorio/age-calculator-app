@@ -74,8 +74,6 @@ button .img_btn{
     bottom: 270px;
 }
 
-
-
 button .img_btn:hover{
     transform: scale(1.05);
     cursor: pointer;
@@ -85,9 +83,16 @@ button .img_btn:hover{
 #show-age-month,
 #show-age-year{
     color: #844dfa;
-    
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
 }
 
-#text-y{
+#year-text,
+#month-text,
+#day-text{
     color: black;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
 }
