@@ -17,7 +17,7 @@ section{
 form{
     font-family: 'Poppins', sans-serif;
     justify-content: center;
-  align-items: center;
+    align-items: center;
 }
 
 form div{
@@ -31,6 +31,8 @@ form input{
     padding: 20px;
     border: 1px solid grey;
     border-radius: 10px;
+    width: 50px;
+    appearance: textfield;
 }
 
 .control-label {
@@ -41,15 +43,13 @@ form input{
 }
 
 .row{
-    position: absolute;
     background-color:white;
     border-radius: 20px;
     border-bottom-right-radius: 100px;
-    top: 50%;
-    left: 50%;
+    position: absolute;
     transform: translate(-50%, -50%);
     padding: 30px;
-    margin: 20px;
+    margin: 5px;
     width: 600px;
     height: 400px;
 }
@@ -65,13 +65,12 @@ button .img_btn{
     top: -20px;
 }
 
-
 #calc-btn{
     background: none;
     border: none;
     position: absolute;
-    left: 545px;
-    bottom: 270px;
+    left: 540px;
+    bottom: 280px;
 }
 
 button .img_btn:hover{
@@ -96,3 +95,52 @@ button .img_btn:hover{
     font-family: 'Poppins', sans-serif;
     font-style: italic;
 }
+
+/* Mobile design */
+@media (max-width: 800px) {
+    .row{
+        border-radius: 20px;
+        border-bottom-right-radius: 100px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        margin: 5px;
+        width: 290px;
+        height: 450px;
+    }
+
+    form input{
+        outline: unset;
+        padding: 20px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        width: 50px;
+        appearance: textfield;
+    }
+
+    #calc-btn{
+        left: 140px;
+        bottom: 300px;
+    }
+
+    #show-age-day,
+    #show-age-month,
+    #show-age-year{
+        margin-bottom: -100px;
+        margin-top: 80px;
+    }
+
+    #year-text,
+    #month-text,
+    #day-text{
+        margin-bottom: -100px;
+        margin-top: 80px;
+    }
+
+    .hr{
+        margin-bottom: -50px;
+        margin-top: 30px;
+    }
+
+}
+
