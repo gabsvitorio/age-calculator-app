@@ -10,6 +10,7 @@ let showAgeYear = document.getElementById("show-age-year");
 const btn = document.getElementById("calc-btn");
 
 var today = new Date();
+var anoBissexto = false;
 
 let d = today.getDate();
 let m = today.getMonth()+1;
@@ -23,58 +24,100 @@ btn.addEventListener("click", (days, month, year) => {
     month = monthH.value;
     year = yearH.value;
 
+    if(yearH.value%4 == 0 && yearH.value%100 != 0){
+        anoBissexto = true;
+        console.log("É um ano bissexto");
+    }else{
+        anoBissexto= false;
+        console.log("Não é um ano bissexto");
+    }
+
+
     if (daysH.value == "" || monthH.value == "" || yearH.value == "") {
-        return alert("Por favor, insira uma data de aniversário válida para calcular sua idade!");
+        document.getElementById('p-invalid-day').style.display = "block"
+        document.getElementById('p-invalid-month').style.display = "block"
+        document.getElementById('p-invalid-year').style.display = "block"
+    }
+    else if (daysH.value < 1 || daysH.value > 31) {
+        document.getElementById('p-invalid-day').style.display = "block"
+    } else if (monthH.value < 1 || monthH.value > 12) {
+        document.getElementById('p-invalid-month').style.display = "block"
+    }else if (yearH.value > y){
+        document.getElementById('p-invalid-year').style.display = "block"
+    }else if(monthH.value == 1 && daysH.value == 30){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 3 && daysH.value == 30){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 5 && daysH.value == 30){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 7 && daysH.value == 30){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 8 && daysH.value == 30){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 10 && daysH.value == 30){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 12 && daysH.value == 30){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 4 && daysH.value == 31){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 6 && daysH.value == 31){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 9 && daysH.value == 31){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 11 && daysH.value == 31){
+        document.getElementById('p-invalid-day').style.display = "block"
+    }else if(monthH.value == 2 && anoBissexto == true && daysH.value == 28){
+        document.getElementById('p-invalid-day').style.display = "block"
     }
 
     console.log();
     console.log(`Data atual: ${d} ${m} ${y}`);
 
-    if(m == 1){ //janeiro
+    if(m == 1){ 
         maxDays = 31;
         monthNum = 1;
     }
-    else if(m == 2){ //fevereiro
+    else if(m == 2){
         maxDays = 28;
         monthNum = 2;
     }
-    else if(m == 3){ //março
+    else if(m == 3){
         maxDays = 31;
         monthNum = 3;
     }
-    else if(m == 4){ //abril
+    else if(m == 4){
         maxDays = 30;
         monthNum = 4;
     }
-    else if(m == 5){ //maio
+    else if(m == 5){
         maxDays = 31;
         monthNum = 5;
     }
-    else if(m == 6){ //junho
+    else if(m == 6){
         maxDays = 30;
         monthNum = 6;
     }
-    else if(m == 7){ //julho
+    else if(m == 7){
         maxDays = 31;
         monthNum = 7;
     }
-    else if(m == 8){ //agosto
+    else if(m == 8){
         maxDays = 31;
         monthNum = 8;
     }
-    else if(m == 9){ //setembro
+    else if(m == 9){
         maxDays = 30;
         monthNum = 9;
     }
-    else if(m == 10){ //outubro
+    else if(m == 10){
         maxDays = 31;
         monthNum = 10;
     }
-    else if(m == 11){ //novembro
+    else if(m == 11){
         maxDays = 30;
         monthNum = 11;
     }
-    else if(m == 12){ //dezembro
+    else if(m == 12){
         maxDays = 31;
         monthNum = 12;
     }

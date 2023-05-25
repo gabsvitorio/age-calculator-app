@@ -35,11 +35,17 @@ form input{
     appearance: textfield;
 }
 
-.control-label {
+.input-dia,
+.input-mes,
+.input-ano{
     display: block;
+}
+
+.control-label {
     color: dimgrey;
     font-family: 'Chivo Mono', monospace;
     font-family: 'Poppins', sans-serif;
+    display: block;
 }
 
 .row{
@@ -94,6 +100,15 @@ button .img_btn:hover{
     font-size: 60px;
     font-family: 'Poppins', sans-serif;
     font-style: italic;
+}
+
+.p-error{
+    color: red;
+    font-size: 12px;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    display: none;
+    position: absolute;
 }
 
 /* Mobile design */

@@ -21,16 +21,19 @@
         <form>
             <div class="row">
               <div class="col">
-                <label class="control-label" for="dia">DIA</label>
-                <input type="number" id="dia" placeholder="Dia">
+                <label class="control-label" id="label-day" for="dia">DIA</label>
+                <input type="number" class="input-dia" id="dia" placeholder="Dia">
+                <p class="p-error" id="p-invalid-day">Dia inválido</p>
               </div>
               <div class="col">
-                <label class="control-label" for="mes">MÊS</label>
-                <input type="number" id="mes" placeholder="Mês">
+                <label class="control-label" id="label-month" for="mes">MÊS</label>
+                <input type="number" class="input-mes" id="mes" placeholder="Mês">
+                <p class="p-error" id="p-invalid-month">Mês inválido</p>
               </div>
               <div class="col">
-                <label class="control-label" for="ano">ANO</label>
-                <input type="number" id="ano" placeholder="Ano">
+                <label class="control-label" id="label-year" for="ano">ANO</label>
+                <input type="number" class="input-ano" id="ano" placeholder="Ano">
+                <p class="p-error" id="p-invalid-year">Ano inválido</p>
               </div>
               <hr class="hr">
               <div class="button">
